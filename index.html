@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DIVINE Prep Quiz</title>
+  <style>
+    body { font-family: Arial; margin: 40px; }
+    .question { margin: 20px 0; }
+    button { margin: 10px; padding: 10px 20px; }
+  </style>
+</head>
+<body>
+  <h1>DREI</h1>
+  <div id="quiz"></div>
+  <button onclick="nextQuestion()">Next Question</button>
+  <p id="score"></p>
+
+  <script>
+
+
+    function nextQuestion() {
+      if (index < questions.length) {
+        const q = questions[index];
+        const answer = prompt(q.q);
+        if (answer == q.a) {
+          score++;
+          alert("Correct!");
+        } else {
+          alert("Wrong! Correct answer: " + q.a);
+        }
+        index++;
+        document.getElementById("score").innerText = "Score: " + score;
+      } else {
+        alert("Quiz finished! Final score: " + score);
+      }
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Exam Prep</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Exam Prep Portal</h1>
+  <p>Select a subject:</p>
+  <ul>
+    <li><a href="physiology.html">Physiology</a></li>
+    <li><a href="biochemistry.html">Biochemistry</a></li>
+    <li><a href="pharmaceutics.html">Pharmaceutics</a></li>
+    <li><a href="chemistry.html">Pharmaceutical Chemistry</a></li>
+    <li><a href="anatomy.html">Anatomy</a></li>
+  </ul>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+
+
+
+      
+
+
+
