@@ -13,10 +13,49 @@
   <script src="script.js"></script>
   <script>
     const questions = [
-      {q: "Building blocks of proteins?", options: ["Sugars", "Amino acids", "Lipids", "Nucleotides"], a: "Amino acids"},
-      {q: "Molecule storing genetic info?", options: ["RNA", "DNA", "Protein", "ATP"], a: "DNA"},
-      {q: "Main energy currency of the cell?", options: ["Glucose", "ATP", "NADH", "Fatty acids"], a: "ATP"}
-    ];
+  {q: "What enzyme is present in hepatocytes but absent in myocytes?", options: ["Glucose-6-phosphatase","Inorganic pyrophosphatase","Phosphoglucomutase","Malate dehydrogenase"], a: "Glucose-6-phosphatase"},
+  {q: "What process is involved in the third last reaction of gluconeogenesis?", options: ["The isomerization of glucose-6-phosphate to fructose-6-phosphate","The production of glucose-6-phosphate from fructose-6-phosphate","The isomerization of 3-phosphoglycerate to 2-phosphoglycerate","The production of 3-phosphoglycerate from 2-phosphoglycerate"], a: "The isomerization of 3-phosphoglycerate to 2-phosphoglycerate"},
+  {q: "How many molecules of inorganic phosphate are released in the synthesis of one molecule of glucose from two pyruvate molecules?", options: ["2","4","6","8"], a: "6"},
+  {q: "Which of the following molecules cannot be used as non-carbohydrate precursors in animal cells undergoing gluconeogenesis?", options: ["Aspartate","Lactate","Pyruvate","Dodecanoate"], a: "Dodecanoate"},
+  {q: "Which hormone promotes gluconeogenesis?", options: ["Glucagon","Norepinephrine","Adrenaline","Insulin"], a: "Glucagon"},
+  {q: "Which membrane system is freely permeable to all relatively small molecules?", options: ["Plasma membrane","Nuclear envelope","Inner mitochondrial membrane","Outer mitochondrial membrane"], a: "Outer mitochondrial membrane"},
+  {q: "Where are ribosomes found inside eukaryotic cells?", options: ["Lysosomes","Nucleoplasm","Mitochondrial matrix","Smooth endoplasmic reticulum"], a: "Mitochondrial matrix"},
+  {q: "In the electron transfer chain, what molecule has a function similar to ubiquinone, by moving electrons from one complex to another?", options: ["Cytochrome c1","Cytochrome c","Cytochrome b","Cytochrome bc1"], a: "Cytochrome c"},
+  {q: "Which complex synthesizes ATP in mammalian cells?", options: ["Complex V","Complex I","Complex IV","Complex III"], a: "Complex V"},
+  {q: "What is the net number of ATP molecules produced from the oxidation of one glucose molecule when the shuttle system used is the glycerol-3-phosphate shuttle?", options: ["25 ATPs","10 ATPs","32 ATPs","30 ATPs"], a: "30 ATPs"},
+  {q: "Which enzyme component of the pyruvate dehydrogenase complex requires the coenzyme TPP?", options: ["Pyruvate Transacetylase","Pyruvate dehydrogenase","Dihydrolipoyl Transacetylase","Dihydrolipoyl dehydrogenase"], a: "Pyruvate dehydrogenase"},
+  {q: "Which of the following is an amphibolic pathway?", options: ["Glycolysis","Gluconeogenesis","Krebs cycle","Oxidative phosphorylation"], a: "Krebs cycle"},
+  {q: "Which of the following enzymes has FAD as its prosthetic group?", options: ["Succinate dehydrogenase","L-malate dehydrogenase","Isocitrate dehydrogenase","α-ketoglutarate dehydrogenase"], a: "Succinate dehydrogenase"},
+  {q: "Which citric acid cycle intermediate is required to synthesize heme in higher eukaryotes?", options: ["Glutamate","α-ketoglutarate","Succinate","Succinyl-CoA"], a: "Succinyl-CoA"},
+  {q: "In which cells does the TCA cycle significantly slow down during starvation?", options: ["Muscle cells","Liver cells","Renal cells","Brain cells"], a: "Liver cells"},
+  {q: "Which pathway is the principal source of energy in erythrocytes?", options: ["β-oxidation","Oxidative phosphorylation","Glycolysis","TCA cycle"], a: "Glycolysis"},
+  {q: "Why is it imperative that glucose is phosphorylated as soon as it enters a cell?", options: ["To trap glucose within the cell","To form a compound that can be cleaved into two trioses","To commit glucose to glycolysis","To commit glucose to energy metabolism"], a: "To trap glucose within the cell"},
+  {q: "What is the end product of the fructokinase reaction?", options: ["Fructose-1,6-bisphosphate","Fructose-2,6-bisphosphate","Fructose-6-phosphate","Fructose-1-phosphate"], a: "Fructose-1-phosphate"},
+  {q: "How many net NADH molecules are produced in the lactic acid fermentation of one glucose molecule?", options: ["2 NADH","0 NADH","4 NADH","1 NADH"], a: "0 NADH"},
+  {q: "Which of the following disorders affects glycolysis in a similar manner as the Pasteur Effect?", options: ["Diabetes mellitus","Obesity","Cancer","Hypertension"], a: "Cancer"},
+  {q: "Where in the cell does Glycolysis occur?", options: ["Nucleus","Cytoplasm","ER","Mitochondria"], a: "Cytoplasm"},
+  {q: "Which enzyme regulates Glycolysis?", options: ["Aldolase","Phosphoglycerate kinase","Glyceraldehyde-3-dehydrogenase","Phosphofructokinase"], a: "Phosphofructokinase"},
+  {q: "Which cells use ONLY Glycolysis for energy?", options: ["Erythrocytes","Leukocytes","Brain cells","Cardiac cells"], a: "Erythrocytes"},
+  {q: "What is the fate of pyruvate in the presence of oxygen?", options: ["Lactate","Ethanol","Acetyl-CoA","Oxaloacetate"], a: "Acetyl-CoA"},
+  {q: "What is the oxidizing agent used during Glycolysis?", options: ["NAD+","FAD","NADP+","FMN"], a: "NAD+"},
+  {q: "Name the small molecule required to activate PFK1.", options: ["Fructose-1,6-bisphosphoglycerate","Fructose-2,6-bisphosphoglycerate","Citrate","DHAP"], a: "Fructose-2,6-bisphosphoglycerate"},
+  {q: "Carbon dioxide is carried by the coenzyme…", options: ["THF","TPP","Biotin","FAD"], a: "Biotin"},
+  {q: "Name the enzyme activated through phosphorylation.", options: ["Fructose-1,6-bisphosphatase","Aldolase","Triose Isomerase","PEP Carboxykinase"], a: "PEP Carboxykinase"},
+  {q: "In which organ does gluconeogenesis mostly occur?", options: ["Heart","Brain","Skeletal Muscles","Liver"], a: "Liver"},
+  {q: "Dalina stayed without eating for 18 hrs, which carbohydrate metabolic process was activated?", options: ["Gluconeogenesis","Glycolysis","Glycogenolysis","Glycogenesis"], a: "Gluconeogenesis"},
+  {q: "Glycolysis takes place in…", options: ["Mitochondrion","Cytosol","ER","Golgi complex"], a: "Cytosol"},
+  {q: "NADPH inhibits…", options: ["Lactate dehydrogenase","Glucose-6-phosphate dehydrogenase","Pyruvate dehydrogenase","Ribose-5-phosphate dehydrogenase"], a: "Glucose-6-phosphate dehydrogenase"},
+  {q: "Which shuttle system is inhibited by Malonyl-CoA?", options: ["Carnitine shuttle system","Citrate shuttle system","Malate-aspartate shuttle","Glycerol phosphate shuttle"], a: "Carnitine shuttle system"},
+  {q: "How many CO₂ molecules are generated from 1 glucose molecule?", options: ["6","4","2","3"], a: "6"},
+  {q: "Which of the following enzymes is not a regulatory enzyme?", options: ["Hexokinase","Glucose-6-phosphate dehydrogenase","Phosphofructokinase","Triose phosphate isomerase"], a: "Triose phosphate isomerase"},
+  {q: "Glycolysis takes place in…", options: ["Mitochondrion","Cytosol","ER","Golgi complex"], a: "Cytosol"},
+  {q: "NADPH inhibits…", options: ["Lactate dehydrogenase","Glucose-6-phosphate dehydrogenase","Pyruvate dehydrogenase","Ribose-5-phosphate dehydrogenase"], a: "Glucose-6-phosphate dehydrogenase"},
+  {q: "Which shuttle system is inhibited by Malonyl-CoA?", options: ["Carnitine shuttle system","Citrate shuttle system","Malate-aspartate shuttle","Glycerol phosphate shuttle"], a: "Carnitine shuttle system"},
+  {q: "How many CO₂ molecules are generated from 1 glucose molecule?", options: ["6","4","2","3"], a: "6"},
+  {q: "Which of the following enzymes is not a regulatory enzyme?", options: ["Hexokinase","Glucose-6-phosphate dehydrogenase","Phosphofructokinase","Triose phosphate isomerase"], a: "Triose phosphate isomerase"},
+]
+
+
     startQuiz(questions);
   </script>
 </body>
